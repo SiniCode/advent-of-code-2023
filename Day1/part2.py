@@ -30,7 +30,7 @@ def get_last_number_in_line(numbers, line):
 
     return ''
 
-def get_sum_of_calibration_values(filename='input.txt'):
+def get_sum_of_calibration_values(filename='Day1/input.txt'):
     numbers = get_numbers()
     calibration_sum = 0
 

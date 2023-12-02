@@ -1,4 +1,4 @@
-def get_sum_of_calibration_values(filename='input.txt'):
+def get_sum_of_calibration_values(filename='Day1/input.txt'):
     numbers = '0123456789'
     calibration_sum = 0
 
