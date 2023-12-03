@@ -1,6 +1,3 @@
-def is_symbol(char):
-    return char not in '0123456789.'
-
 def is_number(char):
     return char in '0123456789'
 
@@ -38,7 +35,7 @@ def get_adjacent_numbers(lines, i, j):
 
     return numbers
 
-def get_sum_of_part_numbers(filename='Day3/input.txt'):
+def get_sum_of_gear_ratios(filename='Day3/input.txt'):
     result = 0
 
     with open(filename) as file:
@@ -47,11 +44,15 @@ def get_sum_of_part_numbers(filename='Day3/input.txt'):
 
     for i in range(len(lines)):
         for j in range(len(lines[0])):
-            if is_symbol(lines[i][j]):
-                result += sum(get_adjacent_numbers(lines, i, j))
+            if lines[i][j] == '*':
+                print(i,j)
+                adjacent_nums = get_adjacent_numbers(lines, i, j)
+                print(adjacent_nums)
+                if len(adjacent_nums) == 2:
+                    result += (adjacent_nums[0] * adjacent_nums[1])
 
     return result
 
 
 if __name__ == '__main__':
-    print(get_sum_of_part_numbers())  # correct: 521601
+    print(get_sum_of_gear_ratios())  # correct: 80694070
