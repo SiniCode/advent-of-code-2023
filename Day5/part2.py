@@ -1,5 +1,5 @@
 import re
-from math import inf
+
 
 class AlmanacInterpreter:
     def __init__(self, input_file='Day5/input.txt'):
