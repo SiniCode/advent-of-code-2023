@@ -41,4 +41,4 @@ class ReportReader:
     
 if __name__ == '__main__':
     RR = ReportReader()
-    print(RR.calculate_sum_of_next_values())
+    print(RR.calculate_sum_of_next_values())  # correct: 1581679977
