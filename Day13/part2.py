@@ -27,7 +27,7 @@ class ReflectionDetector:
             left = pattern[:, i-width:i]
             right = pattern[:, i:i+width]
             match = np.fliplr(left) == right
-            if match.all():
+            if match.sum() == match.size - 1:
                 return i
             
         return -1
@@ -49,8 +49,6 @@ class ReflectionDetector:
         return 100 * horizontals + verticals
 
             
-
 if __name__ == '__main__':
     RD = ReflectionDetector()
-    print(RD.calculate_note_summary())  # correct: 32723
-
+    print(RD.calculate_note_summary())
