@@ -53,4 +53,4 @@ class RockPlatform:
 
 if __name__ == '__main__':
     RP = RockPlatform()
-    print(RP.calculate_total_load())
+    print(RP.calculate_total_load())  # correct: 110128
